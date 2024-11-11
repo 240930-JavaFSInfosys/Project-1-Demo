@@ -6,6 +6,7 @@ import { Login } from './Components/LoginRegister/Login';
 import { Register } from './Components/LoginRegister/Register';
 import 'bootstrap/dist/css/bootstrap.css'; //NEED THIS FOR BOOTSTRAP TO WORK
 import { PetContainer } from './Components/Pet/PetContainer';
+import { UserContainer } from './Components/User/UserContainer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="" element={<Login/>} /> 
             <Route path="/register" element={<Register/>}/>
             <Route path="/pets" element={<PetContainer/>}/>
+            <Route path="/users" element={<UserContainer/>}/>
           </Routes>
         </BrowserRouter>
     </div>

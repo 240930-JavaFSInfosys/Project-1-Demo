@@ -73,5 +73,13 @@ public class PetService {
 
     }
 
+    //method that deletes pets by id
+    public void deletePetById(int petId){
+
+        //delete pet by id
+        pDAO.deleteById(petId);
+
+    }
+
 
 }

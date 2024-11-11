@@ -56,8 +56,15 @@ export const Login:React.FC = () => {
                 //greet the user
                 alert("Welcome, " + store.loggedInUser.username)
 
-                //navigate to /pets
-                navigate("/pets")
+                //Depending on the User's role, send them to:
+                    //pets if they're a non admin
+                    //users if they're an admin
+                if(store.loggedInUser.role === "admin"){
+                    navigate("/users")
+                } else {
+                    navigate("/pets")
+                }
+
             }
         )
         .catch((error)=>{

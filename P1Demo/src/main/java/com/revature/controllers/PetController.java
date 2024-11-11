@@ -52,6 +52,13 @@ public class PetController {
 
     }
 
+    //delete pet by id
+    @DeleteMapping("/{petId}")
+    public ResponseEntity<String> deletePetById(@PathVariable int petId){
+        petService.deletePetById(petId);
+        return ResponseEntity.ok("Pet with id " + petId + " has been deleted");
+    }
+
     //Exception Handler (stole this from the UserController)
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<String> handleIllegalArgument(IllegalArgumentException e){
